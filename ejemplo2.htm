@@ -77,11 +77,34 @@
         empleados.filter(e => e.ciudad == "Madrid").forEach(e => console.log(e));
         
         console.log("creamos un array con los consultores");
-        console.log(empleados.filter( e => e.cargo == "consultor"));
+        // con toLowercase convertimos el cargo a minúsculas
+        console.log(empleados.filter( e => e.cargo.toLowerCase() == "consultor"));
 
+         console.log("creamos un array con los consultores de madrid");
+        // con toLowercase convertimos el cargo a minúsculas
+        // con toUpperCase convertimos la ciudad a mayúsculas
+        console.log(empleados.filter( e => e.cargo.toLowerCase() == "consultor" 
+            && e.ciudad.toUpperCase() == "MADRID"));
 
+        console.log("creamos un array con aquellos que su nombre comience por A");
+        // Las cadenas se pueden tratar de forma parecida a un array
+        console.log(empleados.filter(e => e.nombre[0].toLowerCase() == "a"));
 
+        console.log("creamos un array con los nombres de los programadores");
+        console.log(empleados
+            .filter(e => e.cargo.toLowerCase() == "programador")
+            .map(e => e.nombre));
 
+        console.log("creamos un array con los atributos en gallego");
+        // Para crear un nuevo objeto debemos poner llaves, pero como las llaves
+        // indican comienzo y fin de función, debemos meter el return entre ellas
+        console.log(empleados.map(e => {return {
+            nome: e.nombre, 
+            idade: e.edad, 
+            cidade: e.ciudad,
+            tipo: e.tipo,
+            cargo: e.cargo
+        }}));
     </script>
 </body>
 
