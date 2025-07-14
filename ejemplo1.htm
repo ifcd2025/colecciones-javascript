@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ejemplo 1</title>
+</head>
+<body>
+    <script>
+        // Creamos un array de una dimensión con 7 notas
+        let notas = [6, 3, 8, 10, 2, 5, 4];
+        // Escribo la primera nota
+        console.log(notas[0]); // 6
+        // Si ponemos una posición / índice que no existe,
+        // devuelve undefined
+        console.log(notas[10]); // undefined
+        // Mostramos todas las notas de forma fácil
+        console.log(notas);
+        for(let i = 0; i < notas.length; i++) {
+            console.log(notas[i]);
+        }
+        console.log("Mostramos las notas aprobados");
+        for(let i = 0; i < notas.length; i++) {
+            if(notas[i] >= 5) {
+                console.log(notas[i]);
+            }
+        }
+        console.log("Mostramos las notas de la última a la primera");
+        for(let i = notas.length - 1; i >= 0; i--) {
+            console.log(notas[i]);
+        }
+
+        console.log("Mostramos la primera nota aprobada");
+        for(let i = 0; i < notas.length; i++) {
+            if(notas[i] >= 5) {
+                console.log(notas[i]);
+                break; // Sirve para terminar el bucle antes de tiempo
+            }
+        }
+
+        // Incrementamos todas las notas en 1
+        for(let i = 0; i < notas.length; i++) {
+            notas[i]++; // notas[i] = notas[i] + 1;
+        }
+        console.log("Notas incrementadas");
+        console.log(notas);
+
+        console.log("Mostramos todas las notas con forEach con función arrow");
+        // e, que se puede llamar de cualquier manera, es la 
+        // primera nota, luego la segunda, ....
+        notas.forEach( e => console.log(e));
+          
+        console.log("Mostramos todas las notas con forEach con función anónima");
+        // e, que se puede llamar de cualquier manera, es la 
+        // primera nota, luego la segunda, ....
+        notas.forEach( function(e) { console.log(e) });
+
+        function mostrar(nota) {
+            console.log(nota);
+        }
+        console.log("Mostramos todas las notas con forEach con función normal");
+        notas.forEach(mostrar);
+        
+        //forEach también nos pasa un segundo parámetro con la
+        // posición / índice
+        console.log("Mostramos la nota y su posición");
+        notas.forEach((e, i) => console.log(i, e));
+
+        console.log("Creamos un array con solo los aprobados 'a mano'");
+        const aprobados = []; // array vacio
+        for(let i = 0; i < notas.length; i++) {
+            if(notas[i] >= 5) {
+                // Añadimos la nota al final del array
+                aprobados.push(notas[i]); 
+            }
+        }
+        console.log(aprobados);
+        console.log("Creamos un array con solo los aprobados versión corta");
+        // filter devuelve un nuevo array con los elementos que cumplan
+        // la condición (que la función devuelva true)
+        // e, al igual que antes, es cada una de las notas
+        const aprobados2 = notas.filter(e => e >= 5);
+        console.log(aprobados);
+
+        console.log("Creamos un array con las notas incrementadas"
+                + " en 1 con map");
+        // map recorre todos los elementos del array y devuelve
+        // un nuevo array con los elementos modificados
+        const notas2 = notas.map(e => e + 1);
+        console.log(notas2);
+
+        console.log("Convertimos un array de cadenas en un array "
+            + " de números");
+        const notas3 = ["4", "7", "2", "9"];
+        const notas4 = notas3.map(e => parseInt(e));
+        console.log(notas3, notas4);
+
+        console.log("Escribimos true si todos están aprobados " 
+            + " Método 'a mano'");
+        let estanAprobados = true; // Partimos de que todos han aprobado
+        for(let i = 0; i < notas.length; i++) {
+            if(notas[i] < 5) {
+                estanAprobados = false;
+                break;
+            }
+        }
+        console.log(estanAprobados);
+        console.log("Escribimos true si todos están aprobados con every" );
+        console.log(notas.every(e => e >= 5));
+
+        console.log("Escribimos true si hay algún aprobado con some");
+        console.log(notas.some(e => e >= 5));
+
+        // Crea un array con todas las notas y, a las menores de 10,
+        // les suma 1
+        console.log(notas.filter(e => e < 10).map(e => e + 1));
+
+        
+
+
+
+
+            
+
+
+
+        
+    </script>
+</body>
+</html>

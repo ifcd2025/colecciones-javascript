@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        const empleados = [
+            { nombre: "Luis GÃ³mez", ciudad: "Madrid", edad: 34, cargo: "Ingeniero", activo: true },
+            { nombre: "Ana PÃ©rez", ciudad: "Barcelona", edad: 29, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "Carlos Ruiz", ciudad: "Madrid", edad: 41, cargo: "Gerente", activo: true },
+            { nombre: "LucÃ­a Morales", ciudad: "Sevilla", edad: 25, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "Pedro Navarro", ciudad: "Bilbao", edad: 38, cargo: "Ingeniero", activo: true },
+            { nombre: "Sara DÃ­az", ciudad: "Barcelona", edad: 31, cargo: "Analista", activo: false },
+            { nombre: "Javier Ortega", ciudad: "Madrid", edad: 36, cargo: "Consultor", activo: true },
+            { nombre: "MarÃ­a Santos", ciudad: "Bilbao", edad: 27, cargo: "Programador", activo: false },
+            { nombre: "RaÃºl IbÃ¡Ã±ez", ciudad: "Madrid", edad: 44, cargo: "Analista", activo: true },
+            { nombre: "Elena Gil", ciudad: "Sevilla", edad: 30, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "Fernando Vega", ciudad: "Barcelona", edad: 39, cargo: "Ingeniero", activo: true },
+            { nombre: "Patricia LeÃ³n", ciudad: "Valencia", edad: 33, cargo: "Gerente", activo: false },
+            { nombre: "David MartÃ­n", ciudad: "Sevilla", edad: 28, cargo: "Programador", activo: true },
+            { nombre: "Laura Romero", ciudad: "Madrid", edad: 35, cargo: "PsicÃ³logo", activo: false },
+            { nombre: "Miguel Herrera", ciudad: "Valencia", edad: 42, cargo: "Analista", activo: true },
+            { nombre: "Cristina Molina", ciudad: "Bilbao", edad: 26, cargo: "Consultor", activo: false },
+            { nombre: "Alberto SuÃ¡rez", ciudad: "Madrid", edad: 37, cargo: "Programador", activo: true },
+            { nombre: "Isabel Torres", ciudad: "Sevilla", edad: 32, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "VÃ­ctor Lozano", ciudad: "Barcelona", edad: 40, cargo: "Consultor", activo: true },
+            { nombre: "Clara RÃ­os", ciudad: "Valencia", edad: 24, cargo: "PsicÃ³logo", activo: false },
+            { nombre: "Diego Castro", ciudad: "Bilbao", edad: 45, cargo: "Gerente", activo: true },
+            { nombre: "Natalia Ferrer", ciudad: "Madrid", edad: 29, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "IvÃ¡n SÃ¡nchez", ciudad: "Barcelona", edad: 31, cargo: "Programador", activo: true },
+            { nombre: "Beatriz Cano", ciudad: "Sevilla", edad: 34, cargo: "PsicÃ³logo", activo: false },
+            { nombre: "Ã“scar MÃ©ndez", ciudad: "Bilbao", edad: 28, cargo: "Programador", activo: true },
+            { nombre: "Silvia Pardo", ciudad: "Madrid", edad: 36, cargo: "Analista", activo: false },
+            { nombre: "AndrÃ©s Romero", ciudad: "Valencia", edad: 27, cargo: "Consultor", activo: true },
+            { nombre: "Carmen PeÃ±a", ciudad: "Barcelona", edad: 39, cargo: "Gerente", activo: false },
+            { nombre: "Eduardo Ramos", ciudad: "Madrid", edad: 43, cargo: "Ingeniero", activo: true },
+            { nombre: "InÃ©s Delgado", ciudad: "Sevilla", edad: 30, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "RubÃ©n PeÃ±a", ciudad: "Valencia", edad: 33, cargo: "Programador", activo: true },
+            { nombre: "Teresa Rubio", ciudad: "Bilbao", edad: 26, cargo: "PsicÃ³logo", activo: false },
+            { nombre: "Sergio Llorente", ciudad: "Madrid", edad: 35, cargo: "Consultor", activo: true },
+            { nombre: "Alicia Bravo", ciudad: "Barcelona", edad: 29, cargo: "Programador", activo: false },
+            { nombre: "Manuel Casado", ciudad: "Sevilla", edad: 41, cargo: "Analista", activo: true },
+            { nombre: "Noelia CortÃ©s", ciudad: "Madrid", edad: 30, cargo: "Gerente", activo: false },
+            { nombre: "Gonzalo Arias", ciudad: "Valencia", edad: 38, cargo: "Ingeniero", activo: true },
+            { nombre: "RocÃ­o Mata", ciudad: "Bilbao", edad: 25, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "TomÃ¡s DÃ­az", ciudad: "Madrid", edad: 37, cargo: "Programador", activo: true },
+            { nombre: "Julia Herrero", ciudad: "Sevilla", edad: 32, cargo: "Consultor", activo: false },
+            { nombre: "Pablo Rey", ciudad: "Barcelona", edad: 28, cargo: "Analista", activo: true },
+            { nombre: "Andrea Serrano", ciudad: "Valencia", edad: 34, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "HÃ©ctor Vera", ciudad: "Madrid", edad: 39, cargo: "Gerente", activo: true },
+            { nombre: "Paula Fuentes", ciudad: "Barcelona", edad: 31, cargo: "PsicÃ³logo", activo: false },
+            { nombre: "Francisco Vidal", ciudad: "Bilbao", edad: 44, cargo: "Programador", activo: true },
+            { nombre: "Natalia Pastor", ciudad: "Sevilla", edad: 30, cargo: "DiseÃ±adora", activo: false },
+            { nombre: "Daniel MarÃ­n", ciudad: "Valencia", edad: 27, cargo: "Ingeniero", activo: true },
+            { nombre: "Eva Varela", ciudad: "Madrid", edad: 36, cargo: "Consultor", activo: false },
+            { nombre: "Jorge Bernal", ciudad: "Barcelona", edad: 33, cargo: "Analista", activo: true }
+        ];
+
+        console.log("mostramos el primer empleado");
+        console.log(empleados[0]);
+        console.log("mostramos el nombre del primer empleado");
+        console.log(empleados[0].nombre);
+        console.log("mostramos los madrileños");
+        empleados.forEach( e => {
+            if(e.ciudad == "Madrid") {
+                console.log(e);
+            }
+        });
+        console.log("mostramos los madrileños filtrándolos primero");
+        empleados.filter(e => e.ciudad == "Madrid").forEach(e => console.log(e));
+        
+        console.log("creamos un array con los consultores");
+        console.log(empleados.filter( e => e.cargo == "consultor"));
+
+
+
+
+    </script>
+</body>
+
+</html>
