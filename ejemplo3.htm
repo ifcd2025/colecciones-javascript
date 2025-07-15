@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ejemplo 3</title>
+</head>
+<body>
+    <script>
+        function mostrarPersona1(nombre, ciudad, edad) {
+            console.log(nombre, edad, ciudad);
+        }
+
+        function mostrarPersona2(persona) {
+            console.log(persona.nombre, persona.edad, persona.ciudad);
+        }
+
+        let notas = [4, 3, 1, 7, 0];
+        console.log(notas[0]);
+        console.log(notas[notas.length - 1]);
+        let nombres = ["pedro", "eva", "maría"];
+        nombres.push("jose");
+        console.log(nombres.indexOf("eva")); // 1
+        console.log(nombres.indexOf("eduardo")); // -1
+
+        let nombre = "ana";
+        let ciudad = "vigo";
+        let edad = 21;
+
+        mostrarPersona1(nombre, ciudad, edad);
+
+        let persona = {nombre: "ana", ciudad: "vigo", edad: 21};
+        console.log(persona.nombre);
+        // Se le pueden añadir nuevos atributos / propiedades
+        persona.telefono = "21216212";
+
+        mostrarPersona2(persona);
+
+        let cuadrado = { color: "rojo", lado: 2, punto: {x:3, y: 7}};
+        console.log(cuadrado.color);
+        console.log(cuadrado.punto.x);
+        cuadrado.punto.y = 10;
+        cuadradro.punto = {x: 20, y: 13};
+
+        const p1 = {nombre: "tornillo", precio: .3};
+        let productos = [
+            {nombre: "martillo", precio: 20},
+            {nombre: "sierra", precio: 25},
+            p1
+        ];
+
+        console.log(productos[1].precio);
+        // arrays de dos dimensiones
+        let datos = [[1, 2], [3, 4], [5, 6]];
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
