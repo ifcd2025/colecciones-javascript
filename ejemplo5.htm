@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        const futbolistas = [
+            { "nombre": "Lucas Gómez", "equipo": "Atlético Norte", "dorsal": 9, "goles": 15 },
+            { "nombre": "Marco Díaz", "equipo": "Deportivo Sol", "dorsal": 11, "goles": 12 },
+            { "nombre": "Iván Torres", "equipo": "Rayo del Sur", "dorsal": 7, "goles": 10 },
+            { "nombre": "Carlos Méndez", "equipo": "Estrella FC", "dorsal": 10, "goles": 18 },
+            { "nombre": "Diego Rojas", "equipo": "Leones Unidos", "dorsal": 21, "goles": 8 },
+            { "nombre": "Nicolás Herrera", "equipo": "Atlético Norte", "dorsal": 17, "goles": 6 },
+            { "nombre": "Santiago Paredes", "equipo": "Real Andino", "dorsal": 8, "goles": 14 },
+            { "nombre": "Tomás Silva", "equipo": "Rayo del Sur", "dorsal": 20, "goles": 11 },
+            { "nombre": "Julián Castro", "equipo": "Leones Unidos", "dorsal": 14, "goles": 13 },
+            { "nombre": "Andrés Navarro", "equipo": "Deportivo Sol", "dorsal": 18, "goles": 9 },
+
+            { "nombre": "Manuel Ortega", "equipo": "Estrella FC", "dorsal": 19, "goles": 7 },
+            { "nombre": "David Morales", "equipo": "Atlético Norte", "dorsal": 12, "goles": 10 },
+            { "nombre": "Pedro Vargas", "equipo": "Real Andino", "dorsal": 22, "goles": 6 },
+            { "nombre": "Felipe Núñez", "equipo": "Leones Unidos", "dorsal": 13, "goles": 5 },
+            { "nombre": "Emiliano Cruz", "equipo": "Rayo del Sur", "dorsal": 16, "goles": 8 },
+            { "nombre": "Matías Ruiz", "equipo": "Deportivo Sol", "dorsal": 23, "goles": 12 },
+            { "nombre": "Gabriel Lara", "equipo": "Estrella FC", "dorsal": 4, "goles": 4 },
+            { "nombre": "Francisco Peña", "equipo": "Atlético Norte", "dorsal": 3, "goles": 9 },
+            { "nombre": "Jorge Suárez", "equipo": "Real Andino", "dorsal": 5, "goles": 6 },
+            { "nombre": "Adrián Molina", "equipo": "Leones Unidos", "dorsal": 6, "goles": 7 },
+
+            { "nombre": "Rodrigo Gil", "equipo": "Estrella FC", "dorsal": 2, "goles": 3 },
+            { "nombre": "Sebastián Arias", "equipo": "Rayo del Sur", "dorsal": 15, "goles": 5 },
+            { "nombre": "Cristian Bravo", "equipo": "Deportivo Sol", "dorsal": 24, "goles": 11 },
+            { "nombre": "Héctor Soto", "equipo": "Atlético Norte", "dorsal": 25, "goles": 6 },
+            { "nombre": "Álvaro Fuentes", "equipo": "Real Andino", "dorsal": 26, "goles": 4 },
+            { "nombre": "Esteban Ramos", "equipo": "Leones Unidos", "dorsal": 27, "goles": 5 },
+            { "nombre": "Mauricio Castro", "equipo": "Estrella FC", "dorsal": 28, "goles": 8 },
+            { "nombre": "Alan Vega", "equipo": "Rayo del Sur", "dorsal": 29, "goles": 3 },
+            { "nombre": "Ezequiel Pino", "equipo": "Deportivo Sol", "dorsal": 30, "goles": 7 },
+            { "nombre": "Joaquín Vidal", "equipo": "Atlético Norte", "dorsal": 31, "goles": 9 },
+
+            { "nombre": "Ramiro Figueroa", "equipo": "Real Andino", "dorsal": 32, "goles": 5 },
+            { "nombre": "Kevin Carrasco", "equipo": "Leones Unidos", "dorsal": 33, "goles": 6 },
+            { "nombre": "Pablo Salinas", "equipo": "Estrella FC", "dorsal": 34, "goles": 2 },
+            { "nombre": "Luis Medina", "equipo": "Rayo del Sur", "dorsal": 35, "goles": 4 },
+            { "nombre": "Matías Beltrán", "equipo": "Deportivo Sol", "dorsal": 36, "goles": 7 },
+            { "nombre": "Enzo Ramírez", "equipo": "Atlético Norte", "dorsal": 37, "goles": 10 },
+            { "nombre": "Agustín Paredes", "equipo": "Real Andino", "dorsal": 38, "goles": 3 },
+            { "nombre": "Bruno Delgado", "equipo": "Leones Unidos", "dorsal": 39, "goles": 4 },
+            { "nombre": "Facundo Díaz", "equipo": "Estrella FC", "dorsal": 40, "goles": 6 },
+            { "nombre": "Lucas Ibáñez", "equipo": "Rayo del Sur", "dorsal": 41, "goles": 5 },
+
+            { "nombre": "Ángel Lozano", "equipo": "Deportivo Sol", "dorsal": 42, "goles": 9 },
+            { "nombre": "Benjamín Sosa", "equipo": "Atlético Norte", "dorsal": 43, "goles": 2 },
+            { "nombre": "Sergio Palacios", "equipo": "Real Andino", "dorsal": 44, "goles": 3 },
+            { "nombre": "Gonzalo Ríos", "equipo": "Leones Unidos", "dorsal": 45, "goles": 4 },
+            { "nombre": "Eduardo Cordero", "equipo": "Estrella FC", "dorsal": 46, "goles": 7 },
+            { "nombre": "Fabián Silva", "equipo": "Rayo del Sur", "dorsal": 47, "goles": 2 },
+            { "nombre": "Darío Márquez", "equipo": "Deportivo Sol", "dorsal": 48, "goles": 6 },
+            { "nombre": "Maximiliano Bravo", "equipo": "Atlético Norte", "dorsal": 49, "goles": 5 },
+            { "nombre": "Jonathan Núñez", "equipo": "Real Andino", "dorsal": 50, "goles": 3 },
+            { "nombre": "Fernando Benítez", "equipo": "Leones Unidos", "dorsal": 51, "goles": 4 },
+
+            { "nombre": "Leonardo Aguirre", "equipo": "Estrella FC", "dorsal": 52, "goles": 5 },
+            { "nombre": "Marcelo Herrera", "equipo": "Rayo del Sur", "dorsal": 53, "goles": 2 },
+            { "nombre": "Antonio Ibarra", "equipo": "Deportivo Sol", "dorsal": 54, "goles": 6 },
+            { "nombre": "Cristóbal Ortiz", "equipo": "Atlético Norte", "dorsal": 55, "goles": 4 },
+            { "nombre": "Federico Luna", "equipo": "Real Andino", "dorsal": 56, "goles": 3 },
+            { "nombre": "Renzo Cabrera", "equipo": "Leones Unidos", "dorsal": 57, "goles": 5 },
+            { "nombre": "Samuel Acosta", "equipo": "Estrella FC", "dorsal": 58, "goles": 6 },
+            { "nombre": "Vicente Torres", "equipo": "Rayo del Sur", "dorsal": 59, "goles": 3 },
+            { "nombre": "Franco Lozano", "equipo": "Deportivo Sol", "dorsal": 60, "goles": 7 },
+            { "nombre": "Axel Romero", "equipo": "Atlético Norte", "dorsal": 61, "goles": 8 },
+
+            { "nombre": "Gastón Valle", "equipo": "Real Andino", "dorsal": 62, "goles": 2 },
+            { "nombre": "Nahuel Castaño", "equipo": "Leones Unidos", "dorsal": 63, "goles": 5 },
+            { "nombre": "Tiago Benítez", "equipo": "Estrella FC", "dorsal": 64, "goles": 3 },
+            { "nombre": "Iván Herrera", "equipo": "Rayo del Sur", "dorsal": 65, "goles": 4 },
+            { "nombre": "Damián Godoy", "equipo": "Deportivo Sol", "dorsal": 66, "goles": 6 },
+            { "nombre": "Julio Espinoza", "equipo": "Atlético Norte", "dorsal": 67, "goles": 7 },
+            { "nombre": "Martín Méndez", "equipo": "Real Andino", "dorsal": 68, "goles": 2 },
+            { "nombre": "Camilo Álvarez", "equipo": "Leones Unidos", "dorsal": 69, "goles": 5 },
+            { "nombre": "Ignacio Solís", "equipo": "Estrella FC", "dorsal": 70, "goles": 3 },
+            { "nombre": "Joel Vega", "equipo": "Rayo del Sur", "dorsal": 71, "goles": 4 },
+
+            { "nombre": "Bautista Rojas", "equipo": "Deportivo Sol", "dorsal": 72, "goles": 8 },
+            { "nombre": "Lautaro Vidal", "equipo": "Atlético Norte", "dorsal": 73, "goles": 5 },
+            { "nombre": "Alexis Guzmán", "equipo": "Real Andino", "dorsal": 74, "goles": 4 },
+            { "nombre": "Valentín Cordero", "equipo": "Leones Unidos", "dorsal": 75, "goles": 6 },
+            { "nombre": "Álvaro Pinto", "equipo": "Estrella FC", "dorsal": 76, "goles": 2 },
+            { "nombre": "Ramón Torres", "equipo": "Rayo del Sur", "dorsal": 77, "goles": 3 },
+            { "nombre": "Lucas Moreno", "equipo": "Deportivo Sol", "dorsal": 78, "goles": 5 },
+            { "nombre": "Ignacio Leiva", "equipo": "Atlético Norte", "dorsal": 79, "goles": 7 },
+            { "nombre": "Javier Lozano", "equipo": "Real Andino", "dorsal": 80, "goles": 2 },
+            { "nombre": "Nicolás Vallejos", "equipo": "Leones Unidos", "dorsal": 81, "goles": 6 }
+        ]
+
+        console.log("Un array con los futbolistas que hayan marcado más de 5 goles.");
+        console.log(futbolistas.filter(f => f.goles > 5));
+
+        console.log("Un array con los futbolistas del Real Andino");
+        console.log(futbolistas.filter(f => f.equipo.toUpperCase() == "REAL ANDINO" ));
+
+        console.log("Un array con los futbolistas que hayan marcado más de 5 goles y menos de 8");
+        console.log(futbolistas.filter(f => f.goles > 5 && f.goles < 8));
+
+        console.log("un nuevo array con solo los nombres de los futbolistas.");
+        console.log(futbolistas.map(f => f.nombre));
+
+        console.log("un array con los jugadores cuyo dorsal sea menor que 20.");
+        console.log(futbolistas.filter(f => f.dorsal < 20));
+
+        console.log("un array con los nombres de los jugadores que tienen exactamente 5 goles.");
+        console.log(futbolistas.filter(f => f.goles == 5).map(f => f.nombre));
+
+        console.log("un array con los nombres de los jugadores del Real Andino y del Deportivo Sol");
+        console.log(futbolistas
+            .filter(f => f.equipo == "Real Andino" || f.equipo == "Deportivo Sol")
+            .map(f => f.nombre));
+
+        console.log("¿Todos los jugadores han metido al menos un gol?");
+        console.log(futbolistas.every(f => f.goles >= 1));
+
+        console.log("Crear un array con el nombre del jugador y su dorsal");
+        console.log(futbolistas.map(f => { return {nombre: f.nombre, dorsal: f.dorsal}}));
+
+        console.log("El futbolista con más goles (si hay varios, solo devuelve el primero encontrado)");
+        // Reduce sirve para obtener un solo valor
+        // Reduce llama a la función con los dos primeros elementos de la colección.
+        // Luego la llama con el resultado de la función y el siguiente elemento y así hasta el final
+        console.log(futbolistas.reduce((f1, f2) => f1.goles >= f2.goles ? f1 : f2));
+
+        // Todos los juagdores con más goles. Sería mejor hacer primero el reduce y guardar los goles
+        // para luego usarlos en filter, ya que así ejecuta de nuevo la función reduce por cada jugador
+        console.log(futbolistas
+            .filter(f => f.goles == futbolistas.reduce((f1, f2) => f1.goles > f2.goles ? f1 : f2).goles));
+
+        console.log("Número total de goles");
+        // Podemos pasar un valor inicial la primera vez en lugar del primer elemento
+        console.log(futbolistas.reduce((f1, f2) => f1 + f2.goles, 0));
+
+        console.log("Un array con los nombre de los jugadores y un booleano llamado interesa "
+         + " con el valor true si han metido 10 o más goles o false si no");
+        console.log(futbolistas.map(f => { 
+            return {nombre: f.nombre, interesa: f.goles >= 10}
+        }));
+
+        console.log("Array con los nombres de los equipos sin repetidos");
+        // Comenzamos con un array vacío que vamos rellenando con los nombres de los equipos si no están en
+        // el array
+        console.log(futbolistas.reduce(
+            (datos, f) => {
+            if(datos.includes(f.equipo) == false) {
+                datos.push(f.equipo);
+            }
+            return datos;
+         }, []));
+
+    </script>
+</body>
+
+</html>
