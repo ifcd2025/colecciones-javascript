@@ -1,11 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Ejemplo 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
 </head>
+
 <body>
-https://gliese777.com/web/paises.js
+    <h1>Todo sale por consola</h1>
+    <script>
+        
+        const paises = [
+            { "pais": "Argentina", "habitantes": 46000000, "capital": "Buenos Aires", "idioma": "Español", "continente": "América", "bandera": "ar.png" },
+            { "pais": "Brasil", "habitantes": 213000000, "capital": "Brasilia", "idioma": "Portugués", "continente": "América", "bandera": "br.png" },
+            { "pais": "Canadá", "habitantes": 38000000, "capital": "Ottawa", "idioma": "Inglés", "continente": "América", "bandera": "ca.png" },
+            { "pais": "Chile", "habitantes": 19000000, "capital": "Santiago", "idioma": "Español", "continente": "América", "bandera": "cl.png" },
+            { "pais": "Colombia", "habitantes": 51000000, "capital": "Bogotá", "idioma": "Español", "continente": "América", "bandera": "co.png" },
+            { "pais": "Estados Unidos", "habitantes": 331000000, "capital": "Washington D.C.", "idioma": "Inglés", "continente": "América", "bandera": "us.png" },
+            { "pais": "México", "habitantes": 126000000, "capital": "Ciudad de México", "idioma": "Español", "continente": "América", "bandera": "mx.png" },
+            { "pais": "Perú", "habitantes": 33000000, "capital": "Lima", "idioma": "Español", "continente": "América", "bandera": "pe.png" },
+            { "pais": "Uruguay", "habitantes": 3500000, "capital": "Montevideo", "idioma": "Español", "continente": "América", "bandera": "uy.png" },
+            { "pais": "Venezuela", "habitantes": 28000000, "capital": "Caracas", "idioma": "Español", "continente": "América", "bandera": "ve.png" },
+            { "pais": "Alemania", "habitantes": 83000000, "capital": "Berlín", "idioma": "Alemán", "continente": "Europa", "bandera": "de.png" },
+            { "pais": "España", "habitantes": 47000000, "capital": "Madrid", "idioma": "Español", "continente": "Europa", "bandera": "es.png" },
+            { "pais": "Francia", "habitantes": 67000000, "capital": "París", "idioma": "Francés", "continente": "Europa", "bandera": "fr.png" },
+            { "pais": "Italia", "habitantes": 60000000, "capital": "Roma", "idioma": "Italiano", "continente": "Europa", "bandera": "it.png" },
+            { "pais": "Países Bajos", "habitantes": 17000000, "capital": "Ámsterdam", "idioma": "Neerlandés", "continente": "Europa", "bandera": "nl.png" },
+            { "pais": "Portugal", "habitantes": 10000000, "capital": "Lisboa", "idioma": "Portugués", "continente": "Europa", "bandera": "pt.png" },
+            { "pais": "Reino Unido", "habitantes": 68000000, "capital": "Londres", "idioma": "Inglés", "continente": "Europa", "bandera": "gb.png" },
+            { "pais": "Suecia", "habitantes": 10000000, "capital": "Estocolmo", "idioma": "Sueco", "continente": "Europa", "bandera": "se.png" },
+            { "pais": "Noruega", "habitantes": 5400000, "capital": "Oslo", "idioma": "Noruego", "continente": "Europa", "bandera": "no.png" },
+            { "pais": "Grecia", "habitantes": 10400000, "capital": "Atenas", "idioma": "Griego", "continente": "Europa", "bandera": "gr.png" },
+            { "pais": "Australia", "habitantes": 26000000, "capital": "Canberra", "idioma": "Inglés", "continente": "Oceanía", "bandera": "au.png" },
+            { "pais": "Fiyi", "habitantes": 900000, "capital": "Suva", "idioma": "Fiyiano", "continente": "Oceanía", "bandera": "fj.png" },
+            { "pais": "Papúa Nueva Guinea", "habitantes": 9000000, "capital": "Port Moresby", "idioma": "Tok Pisin", "continente": "Oceanía", "bandera": "pg.png" },
+            { "pais": "Samoa", "habitantes": 200000, "capital": "Apia", "idioma": "Samoano", "continente": "Oceanía", "bandera": "ws.png" },
+            { "pais": "Tonga", "habitantes": 100000, "capital": "Nukualofa", "idioma": "Tongano", "continente": "Oceanía", "bandera": "to.png" },
+            { "pais": "China", "habitantes": 1400000000, "capital": "Pekín", "idioma": "Chino", "continente": "Asia", "bandera": "cn.png" },
+            { "pais": "India", "habitantes": 1390000000, "capital": "Nueva Delhi", "idioma": "Hindi", "continente": "Asia", "bandera": "in.png" },
+            { "pais": "Japón", "habitantes": 125000000, "capital": "Tokio", "idioma": "Japonés", "continente": "Asia", "bandera": "jp.png" },
+            { "pais": "Corea del Sur", "habitantes": 52000000, "capital": "Seúl", "idioma": "Coreano", "continente": "Asia", "bandera": "kr.png" },
+            { "pais": "Vietnam", "habitantes": 97000000, "capital": "Hanói", "idioma": "Vietnamita", "continente": "Asia", "bandera": "vn.png" },
+            { "pais": "Tailandia", "habitantes": 70000000, "capital": "Bangkok", "idioma": "Tailandés", "continente": "Asia", "bandera": "th.png" },
+            { "pais": "Irán", "habitantes": 85000000, "capital": "Teherán", "idioma": "Persa", "continente": "Asia", "bandera": "ir.png" },
+            { "pais": "Turquía", "habitantes": 84000000, "capital": "Ankara", "idioma": "Turco", "continente": "Asia", "bandera": "tr.png" },
+            { "pais": "Sri Lanka", "habitantes": 21000000, "capital": "Colombo", "idioma": "Cingalés", "continente": "Asia", "bandera": "lk.png" },
+            { "pais": "Mongolia", "habitantes": 3300000, "capital": "Ulán Bator", "idioma": "Mongol", "continente": "Asia", "bandera": "mn.png" },
+            { "pais": "Egipto", "habitantes": 104000000, "capital": "El Cairo", "idioma": "Árabe", "continente": "África", "bandera": "eg.png" },
+            { "pais": "Nigeria", "habitantes": 206000000, "capital": "Abuya", "idioma": "Inglés", "continente": "África", "bandera": "ng.png" },
+            { "pais": "Sudáfrica", "habitantes": 59000000, "capital": "Pretoria", "idioma": "Zulu", "continente": "África", "bandera": "za.png" },
+            { "pais": "Kenia", "habitantes": 54000000, "capital": "Nairobi", "idioma": "Suajili", "continente": "África", "bandera": "ke.png" },
+            { "pais": "Argelia", "habitantes": 43000000, "capital": "Argel", "idioma": "Árabe", "continente": "África", "bandera": "dz.png" },
+            { "pais": "Etiopía", "habitantes": 120000000, "capital": "Adís Abeba", "idioma": "Amhárico", "continente": "África", "bandera": "et.png" },
+            { "pais": "Ghana", "habitantes": 31000000, "capital": "Accra", "idioma": "Inglés", "continente": "África", "bandera": "gh.png" },
+            { "pais": "Túnez", "habitantes": 12000000, "capital": "Túnez", "idioma": "Árabe", "continente": "África", "bandera": "tn.png" },
+            { "pais": "Senegal", "habitantes": 17000000, "capital": "Dakar", "idioma": "Francés", "continente": "África", "bandera": "sn.png" },
+            { "pais": "Angola", "habitantes": 33000000, "capital": "Luanda", "idioma": "Portugués", "continente": "África", "bandera": "ao.png" }
+        ];
+        console.log("Número de países");
+        console.log(paises.length);
+        console.log("Nombre del segundo país");
+        console.log(paises[1].pais);
+        console.log("Los nombres de todos los países");
+        for(let i = 0; i < paises.length; i++) {
+            console.log(paises[i].pais);
+        }
+        console.log("Los nombres de todos los países");
+        // función anónima que se ejecuta una vez por cada país
+        // y recibiendo como parámetro el país
+        paises.forEach(function(p) { console.log(p.pais)});
+        // función arrow versión 1
+        paises.forEach((p) => { console.log(p.pais)});
+        // función arrow versión 2. Si solo hay un parámetro
+        // se pueden quitar los paréntesis
+        paises.forEach(p => { console.log(p.pais)});
+        // función arrow versión 3. Si solo hay una instrucción
+        // se pueden quitar las llaves
+        paises.forEach(p => console.log(p.pais));
+
+        console.log("Países de Europa");
+        for(let i = 0; i < paises.length; i++) {
+            if(paises[i].continente.toLowerCase() == "europa") {
+                console.log(paises[i].pais);
+            }
+        }
+        paises.forEach(p => {
+            if(p.continente.toLowerCase() == "europa"){
+                console.log(p.pais);
+            }
+        });
+        console.log("Array con los países de Europa");
+        let europeos = []; // Creamos un array vacío
+        paises.forEach(p => {
+            if(p.continente.toLowerCase() == "europa"){
+                europeos.push(p); // añadimos el país al final del array
+            }
+        });
+        console.log(europeos);
+        console.log("Lo mismo con filter");
+        europeos = []; // Creo un nuevo array
+        // filter crea un array con los elementos que cumplan la 
+        // condición indicada
+        europeos = paises.filter(p => p.continente.toLowerCase() == "europa");
+        console.log(europeos);
+
+        console.log("Nombres de los países que hablan español");
+        paises
+            .filter(p => p.idioma.toLowerCase() == "español")
+            .forEach(p => console.log(p.pais));
+        
+        console.log("array con solo los nombres de los países");
+        // map sirve para devolver un array con los datos cambiados
+        // o diferentes
+        let nombres = paises.map(p => p.pais);
+        console.log(nombres);
+
+        console.log("array con los nombres de los países de más de 100.000.000");
+        nombres = paises
+            .filter(p => p.habitantes > 100_000_000)
+            .map(p => p.pais);
+        console.log(nombres);
+
+        console.log("¿Hay algún país africano que hable español?");
+        // some devuelve true si algún elemento cumple la condición
+        console.log(paises.some(p => 
+            p.continente.toLowerCase() == "áfrica"
+            && p.idioma.toLowerCase() == "español"));   
+
+        console.log("¿Todos los países de Asia tienen más de 50_000_000");
+        // every devuelve true si todos los elementos cumplen la condición
+        console.log(paises
+            .filter(p => p.continente.toLowerCase() == "asia")
+            .every(p => p.habitantes > 50_000_000)); 
+        
+        console.log("un array con el nombre del país y la capital");
+        const datos = paises
+            .map(p => { return {pais: p.pais, capital: p.capital}});
+        console.log(datos);
+
+        gliese777.com/web/futbolistas.js
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>
