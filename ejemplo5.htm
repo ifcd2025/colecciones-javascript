@@ -135,10 +135,11 @@
         // Luego la llama con el resultado de la función y el siguiente elemento y así hasta el final
         console.log(futbolistas.reduce((f1, f2) => f1.goles >= f2.goles ? f1 : f2));
 
-        // Todos los juagdores con más goles. Sería mejor hacer primero el reduce y guardar los goles
+        // Todos los jugadores con más goles. Sería mejor hacer primero el reduce y guardar los goles
         // para luego usarlos en filter, ya que así ejecuta de nuevo la función reduce por cada jugador
         console.log(futbolistas
-            .filter(f => f.goles == futbolistas.reduce((f1, f2) => f1.goles > f2.goles ? f1 : f2).goles));
+            .filter(f => f.goles == futbolistas.reduce(
+                (f1, f2) => f1.goles > f2.goles ? f1 : f2).goles));
 
         console.log("Número total de goles");
         // Podemos pasar un valor inicial la primera vez en lugar del primer elemento
@@ -152,7 +153,7 @@
 
         console.log("Array con los nombres de los equipos sin repetidos");
         // Comenzamos con un array vacío que vamos rellenando con los nombres de los equipos si no están en
-        // el array
+        // el array (includes devuelve true si el elemento está en el array)
         console.log(futbolistas.reduce(
             (datos, f) => {
             if(datos.includes(f.equipo) == false) {
